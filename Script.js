@@ -32,12 +32,12 @@ const getAverageAge = (users) => {
 };
 
 const groupUsersByCity = (users) => {
-    return users.reduce((acc, user) => {
-        if (!acc[user.city]) {
-            acc[user.city] = [];
+    return users.reduce((a, user) => {
+        if (!a[user.city]) {
+            a[user.city] = [];
         }
-        acc[user.city].push(user);
-        return acc;
+        a[user.city].push(user);
+        return a;
     }, {});
 };
 
